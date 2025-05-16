@@ -1,0 +1,65 @@
+syntax = "proto3";
+package piper;
+
+service gw {
+  rpc Synthesize(SynthesizeSpeechRequest) returns (stream SynthesizeSpeechResponse);
+  rpc GetLanguages(GetLanguagesRequest) returns (GetLanguagesResponse);
+  rpc GetVoices (GetVoicesRequest) returns (GetVoicesResponse);
+}
+
+message SynthesizeSpeechRequest {
+  string input_text = 1; 
+  VoiceSelectionParams voice = 2;
+  AudioConfig audio_config = 3;
+}
+
+message VoiceSelectionParams {
+  string language_code = 1;
+  string voice_id = 2;
+}
+
+message AudioConfig {
+  AudioEncoding audio_encoding = 1;
+  int32 sample_rate_hertz = 2;
+}
+
+enum AudioEncoding {
+  AUDIO_ENCODING_UNSPECIFIED = 0;
+  LINEAR16 = 1;
+  MULAW = 2;
+  MP3 = 3;
+  OGG_OPUS = 4;
+}
+
+message SynthesizeSpeechResponse {
+  bytes audio_content = 1;
+}
+
+
+message GetLanguagesRequest {
+}
+
+message GetLanguagesResponse {
+  repeated Language languages = 1;
+}
+
+message Language {
+  string language = 1;
+  string iso_code = 2;
+  string language_id = 3;
+}
+
+message GetVoicesRequest {
+  string language_id = 1; // The ID of the language to get voices for.
+}
+
+// Response message for GetVoices RPC.
+message GetVoicesResponse {
+  repeated Voice voices = 1;
+}
+
+// Voice details.
+message Voice {
+  string voice_id = 1;
+  string voice_name = 2;
+}

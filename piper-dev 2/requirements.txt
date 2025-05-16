@@ -1,0 +1,5 @@
+piper-phonemize==1.1.0
+piper-tts==1.2.0
+grpcio==1.60.0
+grpcio-tools==1.60.0
+PyYAML==6.0.2

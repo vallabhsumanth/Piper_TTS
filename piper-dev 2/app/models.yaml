@@ -1,0 +1,102 @@
+languages:
+  - name: "English (United States)"
+    language_id: "en-US"
+    iso_code: "US"  
+
+  - name: "English (United Kingdom)"  
+    language_id: "en-GB"
+    iso_code: "GB"
+
+  - name: "Dutch (Belgium)"  
+    language_id: "nl-BE"
+    iso_code: "BE"
+
+  - name: "Russian (Russia)"  
+    language_id: "ru-RU"
+    iso_code: "RU"
+
+  - name: "Vietnamese (Vietnam)"  
+    language_id: "vi-VN"
+    iso_code: "VN"
+
+  - name: "Georgian (Georgia)"  
+    language_id: "ka-GE"
+    iso_code: "GE"
+
+  - name: "Icelandic (Iceland)"  
+    language_id: "is-IS"
+    iso_code: "IS"
+
+voices:
+  - name: "en_US_ljspeech"  
+    model_name: "en_US-ljspeech-high.onnx"
+    speaker_id: 0
+    voice_id: "en-US-01"
+    language: "en-US"
+    type: "female"
+    length_scale: 1.0
+
+  - name: "en_GB_voice"  
+    model_name: "en_GB-voice-high.onnx"
+    speaker_id: 2
+    voice_id: "en-GB-01"
+    language: "en-GB"
+    type: "male"
+    length_scale: 1.0
+
+  - name: "nl_BE_nathalie"  
+    model_name: "nl_BE-nathalie-medium.onnx"
+    speaker_id: 1
+    voice_id: "nl-BE-01"
+    language: "nl-BE"
+    type: "female"
+    length_scale: 1.0
+
+  - name: "ru_RU_irina"  
+    model_name: "ru_RU-irina-medium.onnx"
+    speaker_id: 3
+    voice_id: "ru-RU-01"
+    language: "ru-RU"
+    type: "female"
+    length_scale: 1.0
+
+  - name: "vi_VN_vais1000"  
+    model_name: "vi_VN-vais1000.onnx"
+    speaker_id: 4
+    voice_id: "vi-VN-01"
+    language: "vi-VN"
+    type: "male"
+    length_scale: 1.0
+
+  - name: "is_IS_voice" 
+    model_name: "is_IS-voice.onnx"
+    speaker_id: 6
+    voice_id: "is-IS-01"
+    language: "is-IS"
+    type: "male"
+    length_scale: 1.0
+
+models:
+  - name: "en_US-ljspeech-high.onnx"
+    path: "/workspace/piper/piper/models/piper_models/en_US-ljspeech-high.onnx"
+    config_path: "/workspace/piper/piper/models/piper_models/en_US-ljspeech-high.onnx.json"
+
+  - name: "en_GB-voice-high.onnx"  
+    path: "/workspace/piper/piper/models/piper_models/en_GB-semaine-medium.onnx"  
+    config_path: "/workspace/piper/piper/models/piper_models/en_GB-semaine-medium.onnx.json"
+
+  - name: "nl_BE-nathalie-medium.onnx"
+    path: "/workspace/piper/piper/models/piper_models/nl_BE-nathalie-medium.onnx"
+    config_path: "/workspace/piper/piper/models/piper_models/nl_BE-nathalie-medium.onnx.json"
+
+  - name: "ru_RU-irina-medium.onnx"  
+    path: "/workspace/piper/piper/models/piper_models/ru_RU-irina-medium.onnx"
+    config_path: "/workspace/piper/piper/models/piper_models/ru_RU-irina-medium.onnx.json"
+
+  - name: "vi_VN-vais1000.onnx"  
+    path: "/workspace/piper/piper/models/piper_models/vi_VN-vais1000-medium.onnx"
+    config_path: "/workspace/piper/piper/models/piper_models/vi_VN-vais1000-medium.onnx.json"
+
+  - name: "is_IS-voice.onnx" 
+    path: "/workspace/piper/piper/models/piper_models/is_IS-ugla-medium.onnx"
+    config_path: "/workspace/piper/piper/models/piper_models/is_IS-ugla-medium.onnx.json"
